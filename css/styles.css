@@ -271,7 +271,7 @@ img {
 .modal {
   position: absolute;  
   width: 528px;
-  height: 581px;  
+  min-height: 581px;  
   padding: 40px;
   background: #FFFFFF;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -327,6 +327,7 @@ img {
 .modal-textarea {
   width: 100%;
   height: 120px;
+  padding: 12px 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
@@ -334,12 +335,29 @@ img {
   margin-bottom: 20px;
   resize: none;
 }
+.modal-textarea::placeholder {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  
+  color: rgba(117, 117, 117, 0.5);
+}
 .modal-textarea:focus,
 .modal-textarea:hover {
   border-color: var(--action-color);
   cursor: pointer;
 }
-
+.modal-field-checkbox {
+  position: relative;
+}
+.modal-checkbox-label {
+  position: relative;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: var(--primary-text-color);
+}
 .modal-sub-btn {
   font-weight: 700;
   font-size: 16px;
@@ -356,6 +374,8 @@ img {
   border-radius: 4px;
   border-color: #188CE8;
   padding: 10px 55px;
+
+  margin-top: 30px;
 
   position: relative;
   margin-right: auto;
