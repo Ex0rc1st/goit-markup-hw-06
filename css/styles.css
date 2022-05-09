@@ -376,6 +376,7 @@ img {
 .modal-field-checkbox {
   padding-left: 12px;
 }
+
 .modal-checkbox-label {
   position: relative;
   font-size: 14px;
@@ -383,7 +384,30 @@ img {
   letter-spacing: 0.03em;
   text-align: center;
   color: var(--primary-text-color);
+  display: flex;
+  align-items: center;
 }
+.modal-checkbox {
+  position: absolute;
+}
+.modal-checkbox-label::before {
+  content: '';
+  width: 16px;
+  height: 15px;
+  border: 2px solid #000000;
+  border-radius: 3px;
+  display: block;
+  margin-right: 7px;
+}
+
+.modal-checkbox:checked + .modal-checkbox-label::before {
+  background-color: var(--action-color);
+  border: none;
+  background-image: url(../images/vector.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .modal-link {
   font-size: 14px;
   line-height: 1.71;
