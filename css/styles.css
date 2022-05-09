@@ -729,6 +729,14 @@ img {
   background: #2F303A;
   padding: 15px 16px;
   color: var(--background-white);
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-sub-email:hover,
+.footer-sub-email:focus {
+  border: none;
+  border-color: var(--action-color); 
+  border: 1px solid var(--action-color);
 }
 
 .footer-sub-email::placeholder {
